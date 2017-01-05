@@ -13,6 +13,8 @@
 		B698C9D11E1DCB2A00A2E8EA /* InventoryAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B698C9CF1E1DCB2A00A2E8EA /* InventoryAssistant.xcdatamodeld */; };
 		B698C9D31E1DCB2A00A2E8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B698C9D21E1DCB2A00A2E8EA /* Assets.xcassets */; };
 		B698C9D61E1DCB2A00A2E8EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B698C9D41E1DCB2A00A2E8EA /* LaunchScreen.storyboard */; };
+		B6A632091E1DD5FC003D5309 /* 505616.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A632081E1DD5FC003D5309 /* 505616.png */; };
+		B6A6320B1E1DD79C003D5309 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A6320A1E1DD79C003D5309 /* InventoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B698C9D21E1DCB2A00A2E8EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B698C9D51E1DCB2A00A2E8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B698C9D71E1DCB2A00A2E8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6A632081E1DD5FC003D5309 /* 505616.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 505616.png; sourceTree = "<group>"; };
+		B6A6320A1E1DD79C003D5309 /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		B698C9C71E1DCB2A00A2E8EA /* InventoryAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				B6A632081E1DD5FC003D5309 /* 505616.png */,
 				B698C9C81E1DCB2A00A2E8EA /* AppDelegate.swift */,
 				B698C9CA1E1DCB2A00A2E8EA /* ViewController.swift */,
+				B6A6320A1E1DD79C003D5309 /* InventoryViewController.swift */,
 				B698C9CC1E1DCB2A00A2E8EA /* Main.storyboard */,
 				B698C9D21E1DCB2A00A2E8EA /* Assets.xcassets */,
 				B698C9D41E1DCB2A00A2E8EA /* LaunchScreen.storyboard */,
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A632091E1DD5FC003D5309 /* 505616.png in Resources */,
 				B698C9D61E1DCB2A00A2E8EA /* LaunchScreen.storyboard in Resources */,
 				B698C9D31E1DCB2A00A2E8EA /* Assets.xcassets in Resources */,
 				B698C9CE1E1DCB2A00A2E8EA /* Main.storyboard in Resources */,
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B698C9D11E1DCB2A00A2E8EA /* InventoryAssistant.xcdatamodeld in Sources */,
+				B6A6320B1E1DD79C003D5309 /* InventoryViewController.swift in Sources */,
 				B698C9CB1E1DCB2A00A2E8EA /* ViewController.swift in Sources */,
 				B698C9C91E1DCB2A00A2E8EA /* AppDelegate.swift in Sources */,
 			);
@@ -303,6 +311,7 @@
 				B698C9DC1E1DCB2A00A2E8EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
