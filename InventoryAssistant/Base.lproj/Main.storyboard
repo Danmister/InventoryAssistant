@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,7 +40,7 @@
                     <navigationItem key="navigationItem" id="ZjM-Mb-QB7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2sP-78-s71">
                             <connections>
-                                <segue destination="7sy-Cl-ahn" kind="show" id="6pG-Oh-VsL"/>
+                                <segue destination="7sy-Cl-ahn" kind="show" identifier="itemSegue" id="6pG-Oh-VsL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -68,6 +69,9 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y57-q9-2EM">
                                 <rect key="frame" x="29" y="272" width="316" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cCt-Kv-6lT"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -79,19 +83,33 @@
                                     <action selector="addTapped:" destination="7sy-Cl-ahn" eventType="touchUpInside" id="ubc-Wa-Icb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCf-mz-klu">
+                                <rect key="frame" x="165" y="356" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xCf-mz-klu" secondAttribute="height" multiplier="3:2" id="aOW-cY-h8Z"/>
+                                </constraints>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="7sy-Cl-ahn" eventType="touchUpInside" id="SVT-kN-xqq"/>
+                                    <action selector="deleteTapped:" destination="7sy-Cl-ahn" eventType="touchUpInside" id="Rav-qN-0Yi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y57-q9-2EM" firstAttribute="centerY" secondItem="9Ov-5c-w4s" secondAttribute="centerY" constant="-46.5" id="9rI-sH-Lli"/>
-                            <constraint firstItem="Y57-q9-2EM" firstAttribute="leading" secondItem="9Ov-5c-w4s" secondAttribute="leadingMargin" constant="13" id="ArJ-Zj-qQJ"/>
-                            <constraint firstItem="42F-6S-kUm" firstAttribute="centerX" secondItem="9Ov-5c-w4s" secondAttribute="centerX" id="FhV-WB-sby"/>
-                            <constraint firstItem="42F-6S-kUm" firstAttribute="top" secondItem="LGJ-PX-FJW" secondAttribute="bottom" constant="35" id="Hki-5i-afD"/>
-                            <constraint firstItem="Sev-np-bpr" firstAttribute="centerX" secondItem="9Ov-5c-w4s" secondAttribute="centerX" id="I4o-EO-AT0"/>
-                            <constraint firstItem="Y57-q9-2EM" firstAttribute="top" secondItem="42F-6S-kUm" secondAttribute="bottom" constant="21" id="KaS-lZ-obF"/>
-                            <constraint firstItem="Sev-np-bpr" firstAttribute="top" secondItem="Y57-q9-2EM" secondAttribute="bottom" constant="16" id="Qsx-Jk-aWB"/>
-                            <constraint firstItem="Y57-q9-2EM" firstAttribute="centerX" secondItem="9Ov-5c-w4s" secondAttribute="centerX" id="T7H-NX-FCn"/>
-                            <constraint firstItem="Y57-q9-2EM" firstAttribute="top" secondItem="42F-6S-kUm" secondAttribute="bottom" constant="21" id="c1E-rM-baE"/>
-                            <constraint firstItem="42F-6S-kUm" firstAttribute="leading" secondItem="9Ov-5c-w4s" secondAttribute="leadingMargin" constant="13" id="c21-M1-wvq"/>
+                            <constraint firstItem="Sev-np-bpr" firstAttribute="centerX" secondItem="9Ov-5c-w4s" secondAttribute="centerX" id="0uU-EJ-4iV"/>
+                            <constraint firstItem="42F-6S-kUm" firstAttribute="leading" secondItem="Y57-q9-2EM" secondAttribute="leading" id="1Pp-vF-fbi"/>
+                            <constraint firstItem="Y57-q9-2EM" firstAttribute="top" secondItem="42F-6S-kUm" secondAttribute="bottom" constant="21" id="20J-Ye-ZGx"/>
+                            <constraint firstItem="Sev-np-bpr" firstAttribute="top" secondItem="Y57-q9-2EM" secondAttribute="bottom" constant="16" id="6oc-9Y-jf4"/>
+                            <constraint firstItem="xCf-mz-klu" firstAttribute="top" secondItem="Sev-np-bpr" secondAttribute="bottom" constant="8" symbolic="YES" id="7og-Tt-Ehl"/>
+                            <constraint firstItem="42F-6S-kUm" firstAttribute="trailing" secondItem="Y57-q9-2EM" secondAttribute="trailing" id="AHl-Gk-nmv"/>
+                            <constraint firstItem="Y57-q9-2EM" firstAttribute="centerX" secondItem="Sev-np-bpr" secondAttribute="centerX" id="HVd-QT-pkt"/>
+                            <constraint firstItem="42F-6S-kUm" firstAttribute="centerX" secondItem="9Ov-5c-w4s" secondAttribute="centerX" id="P9V-E3-6uV"/>
+                            <constraint firstItem="42F-6S-kUm" firstAttribute="leading" secondItem="9Ov-5c-w4s" secondAttribute="leadingMargin" constant="13" id="TMd-Rs-baP"/>
+                            <constraint firstItem="Sev-np-bpr" firstAttribute="centerY" secondItem="9Ov-5c-w4s" secondAttribute="centerY" id="ffn-Lm-cfN"/>
+                            <constraint firstItem="Sev-np-bpr" firstAttribute="leading" secondItem="xCf-mz-klu" secondAttribute="leading" constant="7" id="q5r-WF-Jmg"/>
+                            <constraint firstItem="42F-6S-kUm" firstAttribute="top" secondItem="LGJ-PX-FJW" secondAttribute="bottom" constant="35" id="vk2-ii-XPF"/>
+                            <constraint firstItem="xCf-mz-klu" firstAttribute="centerX" secondItem="9Ov-5c-w4s" secondAttribute="centerX" id="wOu-6v-gfZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nYP-ef-WV1">
@@ -109,6 +127,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpDateButton" destination="Sev-np-bpr" id="6oq-T1-hpW"/>
+                        <outlet property="deleteButton" destination="xCf-mz-klu" id="u4N-VA-fAY"/>
                         <outlet property="itemImageView" destination="42F-6S-kUm" id="x6b-d4-rdY"/>
                         <outlet property="titleTextField" destination="Y57-q9-2EM" id="9wq-Ry-8ee"/>
                     </connections>
